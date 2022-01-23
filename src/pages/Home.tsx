@@ -70,7 +70,9 @@ export function Home() {
           My Skills
         </Text>
         <FlatList
-          showsVerticalScrollIndicator={false}
+          style={styles.list}
+          showsVerticalScrollIndicator={true}
+          indicatorStyle="white"
           data={mySkills}
           keyExtractor={item => item.id}
           renderItem={({ item }) => (
@@ -111,5 +113,8 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '400',
   },
+  list: {
+    paddingHorizontal: 12,
+  }
 
 });
